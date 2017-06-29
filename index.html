@@ -2,86 +2,107 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Rock Band</title>
 </head>
-
 <body>
-<!--Header Section-->
-<header>
-	<h1><img src="images/RockBand.png" alt="Rock Band"></h1>
-	<nav>
-		<ul>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Tour Dates</a></li>
-			<li><a href="#">About the Band</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav>
-	<h3>Latest Single</h3>
-	<p>Album Title</p>
-	<audio controls></audio>
-	<input type="button" value="Buy Album">
-</header>
-<!--Latest Band News Section-->
-<section>
-	<h2>Latest <strong>Band News</strong></h2>
-	<article>
-		<h3>Featured News Title</h3>
-		<p><time datetime="2016-01-12">12.01.2016</time></p>
-	</article>
-	<article>
-		<h3>News Title</h3>
-		<p><time datetime="2017-11-13">11.13.2017</time></p>
-	</article>
-	<article>
-		<h3>News Title</h3>
-		<p><time datetime="2017-02-04">2.04.2017</time></p>
-	</article>
-	<article>
-		<h3>News Title</h3>
-		<p><time datetime="2017-01-31">1.31.2017</time></p>
-	</article>
-	<article>
-		<h3>News Title</h3>
-		<p><time datetime="2017-02-20">2.20.2017</time></p>
-	</article>
-</section>
-<!--Tour Date Section-->
-<section>
-	<h3>Live Events</h3>
-	<h3>Tour Name</h3>
-	<h4>Tour 2017</h4>
-	<ul>
-		<li><time>Nov 14</time> City, State Location Venue
-					<img src="images/location.png" alt="Location Image">
-					<img src="images/ticket.png" alt="Ticket Image">
-		</li>
-		<li><time>Nov 16</time> City, State Location Venue
-					<img src="images/location.png" alt="Location Image">
-					<img src="images/ticket.png" alt="Ticket Image">
-		</li>
-		<li><time>Dec 3</time> City, State Location Venue
-					<img src="images/location.png" alt="Location Image">
-					<img src="images/ticket.png" alt="Ticket Image">
-		</li>
-		<li><time>Dec 9</time> City, State Location Venue
-					<img src="images/location.png" alt="Location Image">
-					<img src="images/ticket.png" alt="Ticket Image">
-		</li>
-	</ul>
-</section>
-<!--About the Band Section-->
-<section>
-	<h3>About <strong>The Band</strong></h3>
-	<p>Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
-	<p>Phasellius porta. Fusce suscipit varius mium sociis totnatibus et magis dis parturient montes, nascetur ridiculous mus. Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dul Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
-	<input type="button" value="View Timeline">
-	<!--Placeholder for the images later-->
-</section>
-<footer>
-	<p><a href="#">Newsletter</a>
-			<img src="images/social.png" alt="Social Media Icons">
-			<a href="#">Contact</a></p>
-</footer>
+	<!--Header Section-->
+	<header>
+		<h1>
+			<a href="index.html">
+				<img src="images/RockBand.png" alt="Rock Band Logo">
+			</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="news.html">News</a></li>
+				<li><a href="tourDates.html">Tour Dates</a></li>
+				<li><a href="about.html">About the Band</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<h3>Latest Single</h3>
+		<p>Album Title</p>
+		<audio controls></audio>
+		<input type="button" value="Buy Album">
+	</header>
+	<!--Latest Band News Section-->
+	<section>
+		<h2>Latest <strong>Band News</strong></h2>
+		<article>
+			<h3>Featured News Title</h3>
+			<p><time datetime="2016-12-01">12.01.2016</time></p>
+		</article>
+		<article>
+			<h3>News Title</h3>
+			<p><time datetime="2017-11-13">11.13.2017</time></p>
+		</article>
+		<article>
+			<h3>News Title</h3>
+			<p><time datetime="2017-02-04">2.04.2017</time></p>
+		</article>
+		<article>
+			<h3>News Title</h3>
+			<p><time datetime="2017-01-31">1.31.2017</time></p>
+		</article>
+		<article>
+			<h3>News Title</h3>
+			<p><time datetime="2017-02-20">2.20.2017</time></p>
+		</article>
+	</section>
+	<!--Tour Date Section-->
+	<section>
+		<h3>Live Events</h3>
+		<h3>Tour Name</h3>
+		<h4>Tour 2017</h4>
+		<table>
+			<tr>
+				<td><time><abbr title="November">Nov</abbr> 14</time></td>
+				<td>Location Venue</td>
+				<td>City, State</td>
+				<td><img src="images/location.png" alt="Location Image"></td>
+				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+			</tr>
+			<tr>
+				<td><time><abbr title="November">Nov</abbr> 16</time></td>
+				<td>Location Venue</td>
+				<td>City, State</td>
+				<td><img src="images/location.png" alt="Location Image"></td>
+				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+			</tr>
+			<tr>
+				<td><time><abbr title="December">Dec</abbr> 3</time></td>
+				<td>Location Venue</td>
+				<td>City, State</td>
+				<td><img src="images/location.png" alt="Location Image"></td>
+				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+			</tr>
+			<tr>
+				<td><time><abbr title="December">Dec</abbr> 9</time></td>
+				<td>Location Venue</td>
+				<td>City, State</td>
+				<td><img src="images/location.png" alt="Location Image"></td>
+				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+			</tr>
+		</table>
+		<input type="button" value="View More">
+	</section>
+	<!--About the Band Section-->
+	<section>
+		<h3>About <strong>The Band</strong></h3>
+		<p>Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
+		<p>Phasellius porta. Fusce suscipit varius mium sociis totnatibus et magis dis parturient montes, nascetur ridiculous mus. Lorem ipsum
+			dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dul Fusce euismod consequat ante.
+			Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
+		<input type="button" value="View Timeline">
+		<!--Placeholder for the images later-->
+	</section>
+	<!--Footer Section-->
+	<footer>
+		<p><a href="#">Newsletter</a>
+				<img src="images/social.png" alt="Social Media Icons">
+				<a href="#">Contact</a></p>
+	</footer>
 </body>
 </html>
