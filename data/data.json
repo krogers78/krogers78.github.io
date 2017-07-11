@@ -23,7 +23,7 @@
 			"text": "Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Nulla dui Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.",
 			"postDate": "2016-12-24",
 			"moreLink": ""
-	    },		
+	    },
 	    {
 			"postId": 5,
 			"imageURL": "https://images.unsplash.com/photo-1454486837617-ce8e1ba5ebfe",
@@ -31,7 +31,7 @@
 			"text": "Lorem ipsum dolor sit amet, consec tetuer adipiscing. Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dui Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.",
 			"postDate": "2017-01-22",
 			"moreLink": ""
-	    },		
+	    },
 	    {
 			"postId":7,
 			"imageURL": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618",
@@ -39,7 +39,7 @@
 			"text": "Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dui Fusce euismod consequat ante. Phasellllus. porta. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.",
 			"postDate": "2017-02-08",
 			"moreLink": ""
-	    },		
+	    },
 	    {
 			"postId": 8,
 			"imageURL": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7",
@@ -79,7 +79,7 @@
 			"venue": "Terminal West",
 			"locationURL": "https://www.google.com/maps/place/Terminal+West/@33.781769,-84.4183655,17z/data=!3m1!4b1!4m5!3m4!1s0x88f504eab10102ff:0x52b7ba5068df4eca!8m2!3d33.781769!4d-84.4161768",
 			"ticketsURL": "http://terminalwestatl.com/"
-		},		
+		},
 		{
 			"eventId": 187,
 			"sponsor": "Autism Speaks",
@@ -141,11 +141,11 @@
 			"firstname": "Nick",
 			"lastname": "Keith",
 			"instrument": "Drums"
-		}		
+		}
 	],
 	"about": {
 		"quote": "Until I realized that rock music was my connection to the rest of the human race, I felt like I was dying, for some reason, and I didn't know why.",
 		"copy": "Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dui Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor."
-	},
-	
+	}
+
 }
