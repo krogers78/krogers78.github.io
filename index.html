@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script type="text/javascript" src="javascript/data.js"></script>
 	<title>Rock Band</title>
 </head>
 <body>
+
 	<!--Header Section-->
 	<header>
 		<h1>
@@ -25,11 +27,11 @@
 		<h3>Latest Single</h3>
 		<p>Album Title</p>
 		<audio controls></audio>
-		<input type="button" value="Buy Album">
+		<p><a href="#">Buy Album</a></p>
 	</header>
 	<!--Latest Band News Section-->
 	<section>
-		<h2>Latest <strong>Band News</strong></h2>
+		<h2>Latest <span>Band News</span></h2>
 		<article>
 			<h3>Featured News Title</h3>
 			<p><time datetime="2016-12-01">12.01.2016</time></p>
@@ -56,53 +58,72 @@
 		<h3>Live Events</h3>
 		<h3>Tour Name</h3>
 		<h4>Tour 2017</h4>
+		<!--CHANGE IMAGES TO REGULAR LINKS-->
 		<table>
+			<tr>
+				<th>Date</th>
+        <th>Venue</th>
+        <th>Location</th>
+        <th>Get Directions</th>
+        <th>Buy Tickets</th>
+			</tr>
 			<tr>
 				<td><time datetime="2017-11-14"><abbr title="November">Nov</abbr> 14</time></td>
 				<td>Location Venue</td>
 				<td>City, State</td>
-				<td><img src="images/location.png" alt="Location Image"></td>
-				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+				<td><a href="http://maps.google.com">Directions</a></td>
+				<td><a href="#">Tickets</a></td>
 			</tr>
 			<tr>
 				<td><time datetime="2017-11-16"><abbr title="November">Nov</abbr> 16</time></td>
 				<td>Location Venue</td>
 				<td>City, State</td>
-				<td><img src="images/location.png" alt="Location Image"></td>
-				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+				<td><a href="http://maps.google.com">Directions</a></td>
+				<td><a href="#">Tickets</a></td>
 			</tr>
 			<tr>
 				<td><time datetime="2017-12-03"><abbr title="December">Dec</abbr> 3</time></td>
 				<td>Location Venue</td>
 				<td>City, State</td>
-				<td><img src="images/location.png" alt="Location Image"></td>
-				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+				<td><a href="http://maps.google.com">Directions</a></td>
+				<td><a href="#">Tickets</a></td>
 			</tr>
 			<tr>
 				<td><time datetime="2017-12-09"><abbr title="December">Dec</abbr> 9</time></td>
 				<td>Location Venue</td>
 				<td>City, State</td>
-				<td><img src="images/location.png" alt="Location Image"></td>
-				<td><img src="images/ticket.png" alt="Ticket Image"></td>
+				<td><a href="http://maps.google.com">Directions</a></td>
+				<td><a href="#">Tickets</a></td>
 			</tr>
 		</table>
-		<input type="button" value="View More">
+		<p><a href="#">View More</a></p>
 	</section>
 	<!--About the Band Section-->
 	<section>
-		<h3>About <strong>The Band</strong></h3>
+		<h3>About <span>The Band</span></h3>
 		<p>Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
 		<p>Phasellius porta. Fusce suscipit varius mium sociis totnatibus et magis dis parturient montes, nascetur ridiculous mus. Lorem ipsum
 			dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Nulla dul Fusce euismod consequat ante.
 			Lorem ipsum dolor sit amet, consec tetuer adipiscing. Prasesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris.</p>
-		<input type="button" value="View Timeline">
-		<!--Placeholder for the images later-->
+		<p><a href="#">View Timeline</a></p>
+		<ul>
+			<li><img src="#" alt=""></li>
+			<li><img src="#" alt=""></li>
+			<li><img src="#" alt=""></li>
+			<li><img src="#" alt=""></li>
+			<li><img src="#" alt=""></li>
+		</ul>
 	</section>
 	<!--Footer Section-->
 	<footer>
-		<p><a href="#">Newsletter</a>
-				<a href="http://www.twitter.com"><img src="images/social.png" alt="Social Media Icons"></a>
-				<a href="#">Contact</a></p>
+		<ul>
+			<li><a href="news.html">Newsletter</a></li>
+			<li><a href="http://www.facebook.com">Facebook</a></li>
+			<li><a href="http://www.twitter.com">Twitter</a></li>
+			<li><a href="http://www.youtube.com">YouTube</a></li>
+			<li><a href="http://plus.google.com">Google Plus</a></li>
+			<li><a href="http://www.instagram.com">Instagram</a></li>
+		</ul>
 	</footer>
 </body>
 </html>
