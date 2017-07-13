@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest;
 
 xhr.onload = function() {
-	//if (xhr.status === 200) {
+	if (xhr.status === 200) {
 		// process response
 		var responseObject = JSON.parse(xhr.responseText);
 
@@ -40,7 +40,7 @@ xhr.onload = function() {
 				bandMembers[i].querySelector('img').alt = `${responseObject.members[i].firstname} ${responseObject.members[i].lastname}`;
 			}
 		}
-	//}
+	}
 };
 
 xhr.open('GET', 'data/data.json', true);
