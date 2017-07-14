@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest;
 
 xhr.onload = function() {
-	if (xhr.status === 200) {
+	//if (xhr.status === 200) {
 		// process response
 		var responseObject = JSON.parse(xhr.responseText);
 
@@ -40,7 +40,20 @@ xhr.onload = function() {
 				bandMembers[i].querySelector('img').alt = `${responseObject.members[i].firstname} ${responseObject.members[i].lastname}`;
 			}
 		}
-	}
+
+		var newsArticles = document.querySelectorAll('#bandNews article');
+		if (newsArticles) {
+			for (var i = 0; i < newsArticles.length; i++) {
+				newsArticles[i].querySelector('h3').innerHTML = responseObject.news[i].title;
+				newsArticles[i].querySelector('time').innerHTML = responseObject.news[i].postDate;
+				newsArticles[i].querySelector('time').dateTime = responseObject.news[i].postDate;
+				newsArticles[i].querySelectorAll('p')[1].innerHTML = responseObject.news[i].text;
+			}
+		}
+
+
+
+	//}
 };
 
 xhr.open('GET', 'data/data.json', true);
