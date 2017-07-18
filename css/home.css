@@ -1,0 +1,106 @@
+/*Begin the CSS*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem/1.5 Arial, san-serif;
+	background: #333333;
+	color: #EAEAEA;
+}
+/* Header Section */
+h1 {
+  padding: 50px 0px 0px 0px;
+}
+header nav ul {
+  padding: 0px;
+  list-style-type: none;
+}
+header nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #EEEEEE;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+nav a:hover {
+  opacity: 1;
+}
+header {
+  background-image: url("../images/band.jpg");
+  background-position: left center;
+}
+header p a {
+  font-weight: bold;
+  font-size: 14px;
+  background: #9B59B6;
+  color: #EEEEEE;
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #783C90;
+  text-decoration: none;
+}
+/*News Section*/
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.wrapper::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#news {
+	background: #fff;
+	color: #333333;
+}
+#news article {
+	border: 3px solid green;
+	width: calc(25% - 2rem);
+	float: left;
+	margin-bottom: 2rem;
+	padding: 2rem;
+}
+#news article:not(:nth-of-type(2n+3)) {
+	margin-right: 2rem;
+}
+#news article:after {
+	content: "";
+	display: block;
+	width: 25%;
+	height: 0.5rem;
+	background: #ccc;
+	margin-top: 1rem;
+}
+#news article:hover::after {
+	background: purple;
+}
+#news .featured {
+	width: 30%;
+	padding-top: 5rem;
+}
+#news h2 {
+  padding: 20px 0px 0px 0px;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888888;
+  text-transform: uppercase;
+}
+#news h2 span::before {
+  content: "";
+  padding-left: 3px;
+  border-left: 3px solid #cccccc;
+}
+#news h2::before {
+  content: "";
+  padding-left: 3px;
+  border-left: 3px solid #cccccc;
+}
+#news h2 span {
+  color: #444444;
+  font-size: 3rem;
+  font-weight: bold;
+
+	display: block;
+	text-transform: uppercase;
+}

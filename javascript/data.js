@@ -12,6 +12,7 @@ xhr.onload = function() {
 				newsArticles[i].querySelector('h3').innerHTML = responseObject.news[i].title;
 				newsArticles[i].querySelector('time').innerHTML = responseObject.news[i].postDate;
 				newsArticles[i].querySelector('time').dateTime = responseObject.news[i].postDate;
+				//newsArticles[i].querySelector('img').src = responseObject.news[i].imageURL;
 			}
 		}
 		//populate the tour dates section
