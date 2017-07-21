@@ -45,6 +45,9 @@ header p a, #tourDates p a {
   border-bottom: 0.3rem solid #783C90;
   text-decoration: none;
 }
+.latestSingle {
+	text-align: right;
+}
 /*--------------------------News Section--------------------------*/
 .wrapper::after {
 	content: "";
@@ -176,14 +179,14 @@ header p a, #tourDates p a {
 }
 #tourDates a[href*="google"], #tourDates tr td:nth-of-type(5n) a {
 	display: block;
-	text-indent: -100rem;
+	text-indent: -500rem;
 	height: 5rem;
 	width: 5rem;
 }
 #tourDates a[href*="google"] {
 	background-image: url("../images/location.png");
 }
-#tourDates tr td:nth-of-type(5n) a {
+#tourDates tr td:nth-of-type(5) a {
 	background-image: url("../images/ticket.png");
 	background-repeat: no-repeat;
 }
@@ -223,6 +226,11 @@ header p a, #tourDates p a {
 	z-index: 1;
 	top: 35rem;
 }
+#tourDates tr td:nth-of-type(1) span ,#tourDates tr td:nth-of-type(2), #tourDates tr td:nth-of-type(3){
+	display: block;
+}
+#tourDates tr td:nth-of-type(1) { padding-right: 5rem; }
+#tourDates tr td:nth-of-type(2) { padding-right: 35rem; }
 /*--------------------------About Section--------------------------*/
 
 /*--------------------------Footer Section--------------------------*/
@@ -231,7 +239,7 @@ footer {
 }
 footer li {
 	list-style-type: none;
-	display: inline;
+	display: inline-block;
 	padding: 0rem 5rem 0rem 0rem;
 }
 footer li a {

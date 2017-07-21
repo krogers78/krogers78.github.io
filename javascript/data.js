@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest;
 
 xhr.onload = function() {
-	//if (xhr.status === 200) {
+	if (xhr.status === 200) {
 		// process response
 		var responseObject = JSON.parse(xhr.responseText);
 
@@ -16,14 +16,18 @@ xhr.onload = function() {
 			}
 		}
 		//populate the tour dates section
-		var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		var monthAbbr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		var monthNotAbbr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 		var tourDates = document.querySelectorAll('#tourDates tbody tr');
 		if (tourDates) {
 			for (var i = 0; i < tourDates.length; i++) {
 				//Convert the date into a Date object to change the format
 				var d = new Date(responseObject.events[i].date);
 
-				tourDates[i].querySelector('time').innerHTML = `${monthArray[d.getMonth()]} <span>${d.getUTCDate()}</span>`;
+				var monthId = d.getMonth();
+
+				// tourDates[i].querySelector('time').innerHTML = `<abbr title=\"`
+				tourDates[i].querySelector('time').innerHTML = `<abbr title="${monthNotAbbr[monthId]}">${monthAbbr[d.getMonth()]}</abbr> <span>${d.getUTCDate()}</span>`;
 				tourDates[i].querySelector('time').dateTime = responseObject.events[i].date;
 				tourDates[i].querySelectorAll('td')[1].innerHTML = responseObject.events[i].venue;
 				tourDates[i].querySelectorAll('td')[2].innerHTML = `${responseObject.events[i].city}, ${responseObject.events[i].state}`;
@@ -58,7 +62,7 @@ xhr.onload = function() {
 
 
 
-	//}
+	}
 };
 
 xhr.open('GET', 'data/data.json', true);
