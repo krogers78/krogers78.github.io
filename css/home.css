@@ -7,7 +7,14 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
-/* Header Section */
+.wrapper {
+	max-width: 90rem;
+	margin: 0 auto;
+}
+#about img {
+	width: 100%;
+}
+/*--------------------------Header Section--------------------------*/
 h1 {
   padding: 5rem 0rem 0rem 0rem;
 }
@@ -24,11 +31,11 @@ header nav a {
 nav a:hover {
   color: #EEEEEE;
 }
-header {
+header, #tourDates {
   background-image: url("../images/band.jpg");
   background-position: left center;
 }
-header p a {
+header p a, #tourDates p a {
   font-weight: bold;
   font-size: 0.875rem;
   background: #9B59B6;
@@ -38,11 +45,7 @@ header p a {
   border-bottom: 0.3rem solid #783C90;
   text-decoration: none;
 }
-/*News Section*/
-.wrapper {
-	max-width: 90rem;
-	margin: 0 auto;
-}
+/*--------------------------News Section--------------------------*/
 .wrapper::after {
 	content: "";
 	display: block;
@@ -54,26 +57,36 @@ header p a {
 }
 #news article {
 	width: calc(25% - 2rem);
+	height: 15rem;
 	float: left;
 	margin-bottom: 2rem;
-	padding: 2rem;
+	position: relative;
+	box-sizing: border-box;
+  overflow: hidden;
 }
 #news article:not(:nth-of-type(2n+3)) {
 	margin-right: 2rem;
 }
-#news article:after {
+#news article::after {
 	content: "";
 	display: block;
-	width: 25%;
-	height: 0.5rem;
-	background: #ccc;
+	position: absolute;
+	bottom: 2rem;
 	margin-top: 1rem;
+	width: 40%;
+	height: 0.5rem;
+	background: rgba(0,0,0,0.1);
+	z-index: 1;
+}
+#news article:nth-of-type(1)::after {
+	bottom: 5rem;
 }
 #news article:hover::after {
-	background: purple;
+	background: #9B59B6;
 }
 #news .featured {
-	width: 30%;
+	width: 50%;
+	height: 32rem;
 	padding-top: 5rem;
 }
 #news h2 {
@@ -83,6 +96,13 @@ header p a {
   font-weight: bold;
   color: #888888;
   text-transform: uppercase;
+}
+#news h2 span {
+  color: #444444;
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+	text-transform: uppercase;
 }
 #news h2 span::before {
   content: "";
@@ -94,34 +114,129 @@ header p a {
   padding-left: 0.3rem;
   border-left: 0.3rem solid #cccccc;
 }
-#news h2 span {
-  color: #444444;
+#news article h3, #news article time {
+	display: block;
+	position: absolute;
+	background: #222222;
+	padding-left: 2rem;
+	width: calc(100% - 4rem);
+	z-index: 1;
+}
+#news article h3 {
+	/*padding-top: 0;*/
+	font-size: 1.8rem;
+	top: 7rem;
+  color: #E5E5E5;
+}
+#news article time {
+	top: 6.5rem;
+	left: 0rem;
+	/*padding-bottom: 0;*/
+  color: #888888;
+}
+#news article img {
+	position: absolute;
+  top: 0;
+  left: 0;
+	height: 100%;
+  width: 100%;
+	z-index: 0;
+}
+#news article:nth-of-type(1) h3 {
+	position: absolute;
+	top: 20rem;
+}
+#news article:nth-of-type(1) h3 {
+	top: 19rem;
+	font-size: 2.5rem;
+}
+#news article:nth-of-type(1) time { top: 19.5rem; }
+/*--------------------------Tour Dates Section--------------------------*/
+#tourDates {
+	position: relative;
+	height: 40rem;
+}
+#tourDates .wrapper::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background: rgba(0,0,0,0.3);
+}
+#tourDates table {
+	position: absolute;
+	z-index: 2;
+}
+#tourDates thead {
+	display: none;
+}
+#tourDates a[href*="google"], #tourDates tr td:nth-of-type(5n) a {
+	display: block;
+	text-indent: -100rem;
+	height: 5rem;
+	width: 5rem;
+}
+#tourDates a[href*="google"] {
+	background-image: url("../images/location.png");
+}
+#tourDates tr td:nth-of-type(5n) a {
+	background-image: url("../images/ticket.png");
+	background-repeat: no-repeat;
+}
+#tourDates h2, #tourDates h3, #tourDates h4 {
+	position: relative;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+  line-height: 0;
+}
+#tourDates h2 {
+	padding: 2rem 0rem 0rem 0rem;
+	line-height: 1;
+	font-size: 1.5rem;
+	color: #888888;
+	text-align: right;
+	border-right: 0.3rem solid #CCCCCC;
+	padding-right: 0.5rem;
+}
+#tourDates h2 span {
+	color: #EEEEEE;
   font-size: 3rem;
   font-weight: bold;
   display: block;
 	text-transform: uppercase;
 }
-#news article {
-  position: relative;
-  overflow: hidden;
+#tourDates h3 {
+	font-size: 3rem;
+	color: #EEEEEE;
 }
-#news article h3 {
-  color: #E5E5E5;
-  position: relative;
-  padding-bottom: 0.3rem;
-  top: 6.5rem;
-  z-index: 2;
-}
-#news article p {
-  position: relative;
+#tourDates h4 {
+  font-size: 1.5rem;
   color: #888888;
-  z-index: 3;
 }
-#news article img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
+#tourDates p {
+	position: absolute;
+	z-index: 1;
+	top: 35rem;
+}
+/*--------------------------About Section--------------------------*/
 
+/*--------------------------Footer Section--------------------------*/
+footer {
+	background: #FFFFFF;
+}
+footer li {
+	list-style-type: none;
+	display: inline;
+	padding: 0rem 5rem 0rem 0rem;
+}
+footer li a {
+	text-decoration: none;
+}
+footer ul {
+	text-align: center;
 }

@@ -16,10 +16,14 @@ xhr.onload = function() {
 			}
 		}
 		//populate the tour dates section
+		var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		var tourDates = document.querySelectorAll('#tourDates tbody tr');
 		if (tourDates) {
 			for (var i = 0; i < tourDates.length; i++) {
-				tourDates[i].querySelector('time').innerHTML = responseObject.events[i].date;
+				//Convert the date into a Date object to change the format
+				var d = new Date(responseObject.events[i].date);
+
+				tourDates[i].querySelector('time').innerHTML = `${monthArray[d.getMonth()]} <span>${d.getUTCDate()}</span>`;
 				tourDates[i].querySelector('time').dateTime = responseObject.events[i].date;
 				tourDates[i].querySelectorAll('td')[1].innerHTML = responseObject.events[i].venue;
 				tourDates[i].querySelectorAll('td')[2].innerHTML = `${responseObject.events[i].city}, ${responseObject.events[i].state}`;
