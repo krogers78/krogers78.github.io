@@ -1,0 +1,23 @@
+/*--------------------------Begin the CSS--------------------------*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem/1.5 Arial, san-serif;
+	background: #333333;
+	color: #EAEAEA;
+}
+.wrapper {
+	max-width: 90rem;
+	margin: 0 auto;
+}
+/*--------------------------news Section--------------------------*/
+#bandNews img {
+  width: 30%;
+  float: left;
+}
+/*--------------------------Footer Section--------------------------*/
+footer li {
+  clear: both;
+  display: inline-block;
+}

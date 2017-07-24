@@ -1,0 +1,37 @@
+/*--------------------------Begin the CSS--------------------------*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem/1.5 Arial, san-serif;
+	background: #333333;
+	color: #EAEAEA;
+}
+.wrapper {
+	max-width: 90rem;
+	margin: 0 auto;
+}
+/*--------------------------Header Section--------------------------*/
+header {
+  background: #783C90;
+  height: 12.5rem;
+  text-align: center;
+}
+header img {
+  width: 75%;
+}
+header h1 {
+  float: left;
+}
+header li {
+  padding: 5rem 3rem 0rem 0rem;
+  display: inline-block;
+}
+header li a {
+  color: #EEEEEE;
+  opacity: 0.7;
+  text-decoration: none;
+}
+header li a:hover {
+  opacity: 1;
+}

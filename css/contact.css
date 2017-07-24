@@ -1,0 +1,65 @@
+/*--------------------------Begin the CSS--------------------------*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem/1.5 Arial, san-serif;
+	background: #333333;
+	color: #EAEAEA;
+}
+.wrapper {
+	max-width: 90rem;
+	margin: 0 auto;
+}
+/*--------------------------Contact Section--------------------------*/
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform:  uppercase;
+}
+/*#contact dl {
+  background: #783C90;
+  padding: 5rem;
+  border: 0.3rem solid red;
+  margin: 5rem 30rem 5rem 0;
+  float: left;
+}*/
+/*#contact form {
+  background: #783C90;
+  padding: 0;
+  border: 0.3rem solid red;
+  margin: 0;
+  clear: both;
+  text-align: center;
+}*/
+#contact {
+  position: relative;
+}
+#contact dl, #contact form {
+  background: #783C90;
+  position: absolute;
+  top: 10rem;
+}
+#contact dl {
+  padding: 5rem;
+  left: 35rem;
+}
+#contact form {
+  top: 11.5rem;
+  padding: 2rem 3rem 3rem 3rem;
+  left: 80rem;
+}
+
+/*--------------------------Footer Section--------------------------*/
+footer {
+  top: 52rem;
+  left: 50rem;
+  position: relative;
+}
+footer li {
+  display: inline-block;
+}
+footer ul a {
+  color: #A5A5A5;
+  text-decoration: none;
+}
