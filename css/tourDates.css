@@ -7,6 +7,9 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
+abbr {
+	text-decoration: none;
+}
 /*--------------------------Tour Dates Section--------------------------*/
 section thead {
   visibility: hidden;
