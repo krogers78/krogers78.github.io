@@ -7,12 +7,38 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
+/*Classes*/
 .wrapper {
-	max-width: 90rem;
+	max-width: 110rem;
 	margin: 0 auto;
 }
-#about img {
-	width: 100%;
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background: #9B59B6;
+	border-bottom: 0.2rem solid #783C90;
+	color: #EEEEEE;
+}
+.button::before, .button:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: #9c59b6 transparent transparent transparent;
+}
+.button::before {
+	top: 0;
+	left: 100%;
+	border-width: 3.6rem 3.6rem 0 0;
+}
+.button::after {
+	bottom: 0;
+	left: calc(100% + 1.8rem);
+	border-width: 1.4rem 1.4rem 0 0;
+	transform: rotate(45deg);
 }
 /*--------------------------Header Section--------------------------*/
 h1 {
@@ -23,6 +49,7 @@ header nav ul {
   list-style-type: none;
 }
 header nav a {
+	font-size: 2rem;
   text-decoration: none;
   font-weight: bold;
   color: #AAAAAA;
@@ -35,14 +62,7 @@ header, #tourDates {
   background-image: url("../images/band.jpg");
   background-position: left center;
 }
-header p a, #tourDates p a {
-  font-weight: bold;
-  font-size: 0.875rem;
-  background: #9B59B6;
-  color: #EEEEEE;
-  text-transform: uppercase;
-  padding: 1rem 2rem 1rem 2rem;
-  border-bottom: 0.3rem solid #783C90;
+header p a, #tourDates p a, #about p a {
   text-decoration: none;
 }
 .latestSingle {
@@ -107,12 +127,12 @@ header p a, #tourDates p a {
   display: block;
 	text-transform: uppercase;
 }
-#news h2 span::before {
+#news h2 span::before, #about h3 span::before {
   content: "";
   padding-left: 0.3rem;
   border-left: 0.3rem solid #cccccc;
 }
-#news h2::before {
+#news h2::before, #about h3::before {
   content: "";
   padding-left: 0.3rem;
   border-left: 0.3rem solid #cccccc;
@@ -123,10 +143,10 @@ header p a, #tourDates p a {
 	background: #333333;
 	padding-left: 2rem;
 	width: calc(100% - 4rem);
+	text-transform: uppercase;
 	z-index: 1;
 }
 #news article h3 {
-	/*padding-top: 0;*/
 	font-size: 1.8rem;
 	top: 7rem;
   color: #E5E5E5;
@@ -134,7 +154,6 @@ header p a, #tourDates p a {
 #news article time {
 	top: 6.5rem;
 	left: 0rem;
-	/*padding-bottom: 0;*/
   color: #888888;
 }
 #news article img {
@@ -159,7 +178,7 @@ header p a, #tourDates p a {
 	position: relative;
 	height: 40rem;
 }
-#tourDates .wrapper::before {
+#tourDates .wrapper::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -167,35 +186,21 @@ header p a, #tourDates p a {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	background: rgba(0,0,0,0.4);
 	z-index: 0;
-	background: rgba(0,0,0,0.3);
 }
 #tourDates table {
 	position: absolute;
+	top: 10rem;
+	left: 45rem;
+	color: #CCCCCC;
+	padding-left: 2rem;
 	z-index: 2;
 }
-#tourDates thead {
-	display: none;
-}
-#tourDates a[href*="google"], #tourDates tr td:nth-of-type(5n) a {
-	display: block;
-	text-indent: -500rem;
-	height: 5rem;
-	width: 5rem;
-}
-#tourDates a[href*="google"] {
-	background-image: url("../images/location.png");
-}
-#tourDates tr td:nth-of-type(5) a {
-	background-image: url("../images/ticket.png");
-	background-repeat: no-repeat;
-}
-#tourDates h2, #tourDates h3, #tourDates h4 {
-	position: relative;
+#tourDates h2, #tourDates h3 {
 	text-transform: uppercase;
 	font-weight: bold;
-	padding: 0;
-  line-height: 0;
+  line-height: 1;
 }
 #tourDates h2 {
 	padding: 2rem 0rem 0rem 0rem;
@@ -205,6 +210,9 @@ header p a, #tourDates p a {
 	text-align: right;
 	border-right: 0.3rem solid #CCCCCC;
 	padding-right: 0.5rem;
+	position: absolute;
+	z-index: 2;
+	left: 110rem;
 }
 #tourDates h2 span {
 	color: #EEEEEE;
@@ -214,41 +222,163 @@ header p a, #tourDates p a {
 	text-transform: uppercase;
 }
 #tourDates h3 {
-	font-size: 3rem;
+	position: relative;
+	background: #9B59B6;
+	padding: 1.5rem;
+	text-align: right;
+	float: left;
+	font-size: 2rem;
+	color: #EEEEEE;
+	position: absolute;
+	z-index: 2;
+	top: 8rem;
+	left: 25rem;
+}
+#tourDates h3::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 0;
+	right: 15rem;
+	border-style: solid;
+	border-width: 0 6.55rem 6.55rem 0;
+	border-color: transparent #9c59b6 transparent transparent;
+}
+#tourDates h3 span {
+	display: block;
+  font-size: 1.5rem;
 	color: #EEEEEE;
 }
-#tourDates h4 {
-  font-size: 1.5rem;
-  color: #888888;
-}
 #tourDates p {
-	position: absolute;
 	z-index: 1;
 	top: 35rem;
 }
-#tourDates tr td:nth-of-type(1) span ,#tourDates tr td:nth-of-type(2), #tourDates tr td:nth-of-type(3){
+#tourDates thead {
+	display: none;
+}
+#tourDates a[href*="google"], #tourDates td:nth-of-type(5n) a {
+	display: block;
+	background-repeat: no-repeat;
+	text-indent: -999rem;
+	height: 5rem;
+	width: 5rem;
+}
+#tourDates a[href*="google"] {
+	background-image: url("../images/location.png");
+	padding: 0 1.5rem 0 0;
+}
+#tourDates tr td:nth-of-type(5) a {
+	background-image: url("../images/ticket.png");
+	background-repeat: no-repeat;
+}
+#tourDates tr td:nth-of-type(1) abbr ,#tourDates tr td:nth-of-type(2), #tourDates tr td:nth-of-type(3){
+	font-weight: bold;
 	display: block;
 }
+#tourDates tr td:nth-of-type(1) abbr, #tourDates tr td:nth-of-type(2) {
+	line-height: 1;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+#tourDates tr td:nth-of-type(1), #tourDates tr td:nth-of-type(3) {
+	font-size: 1.8rem;
+}
 #tourDates tr td:nth-of-type(1) {
-	padding-right: 5rem;
+	padding: 0 5rem 0.5rem 0;
 }
 #tourDates tr td:nth-of-type(2) {
-	padding-right: 35rem;
+	padding-right: 15rem;
+}
+#tourDates tr:nth-of-type(odd) {
+	background: rgba(0,0,0,0.3);
+}
+#tourDates .button {
+	position: absolute;
+	top: 35rem;
+	left: 47rem;
+	z-index: 2;
 }
 /*--------------------------About Section--------------------------*/
-
+.info {
+	float: left;
+		width: 50%;
+}
+.quote {
+	font-style: italic;
+}
+#about h3, #about h3 span {
+	line-height: 1;
+	text-transform: uppercase;
+}
+#about h3 {
+	color: #888888;
+	font-size: 1.5rem;
+}
+#about h3 span {
+	color: #EEEEEE;
+	font-size: 3rem;
+	display: block;
+}
+#about ul {
+	padding: 0;
+	float: right;
+	width: 30%;
+}
+#about li {
+	float: left;
+	width: 50%;
+	list-style-type: none;
+}
+#about img {
+	padding: 0.5rem;
+	width: 100%;
+}
+#about p:not(:nth-of-type(3)) {
+	font-size: 1.5rem;
+	padding: 0 10rem 0 0;
+}
 /*--------------------------Footer Section--------------------------*/
 footer {
-	background: #FFFFFF;
+	background: #EEEEEE;
+	color: #666666;
+	padding: 2rem;
+	text-align: center;
 }
 footer li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0rem 5rem 0rem 0rem;
+	padding: 0rem 0.5rem 0rem 0rem;
 }
 footer li a {
+	font-weight: bold;
+	text-transform: uppercase;
 	text-decoration: none;
 }
-footer ul {
-	text-align: center;
+footer a[href^='http'] {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	text-indent: -9999px;
+}
+footer a[href*='facebook.com'], footer a[href*='google.com'], footer a[href*='twitter.com'], footer a[href*='youtube.com'],footer a[href*='instagram.com'] {
+	background: url("../images/social.png");
+	background-size: 15rem;
+	top: 0;
+}
+
+footer a[href*='facebook.com']:hover, footer a[href*='google.com']:hover, footer a[href*='twitter.com']:hover, footer a[href*='youtube.com']:hover, footer a[href*='instagram.com']:hover {
+	background-position-y: bottom;
+}
+footer a[href*='google.com'] {
+	background-position-x: 3rem;
+}
+footer a[href*='instagram.com'] {
+	background-position-x: 6rem;
+}
+footer a[href*='youtube.com'] {
+	background-position-x: 9rem;
+}
+footer a[href*='twitter.com'] {
+	background-position-x: 12rem;
 }

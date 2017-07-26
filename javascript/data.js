@@ -27,7 +27,7 @@ xhr.onload = function() {
 				var monthId = d.getMonth();
 
 				// tourDates[i].querySelector('time').innerHTML = `<abbr title=\"`
-				tourDates[i].querySelector('time').innerHTML = `<abbr title="${monthNotAbbr[monthId]}">${monthAbbr[d.getMonth()]}</abbr> <span>${d.getUTCDate()}</span>`;
+				tourDates[i].querySelector('time').innerHTML = `<abbr title="${monthNotAbbr[monthId]}">${monthAbbr[d.getMonth()]}</abbr> ${d.getUTCDate()}`;
 				tourDates[i].querySelector('time').dateTime = responseObject.events[i].date;
 				tourDates[i].querySelectorAll('td')[1].innerHTML = responseObject.events[i].venue;
 				tourDates[i].querySelectorAll('td')[2].innerHTML = `${responseObject.events[i].city}, ${responseObject.events[i].state}`;

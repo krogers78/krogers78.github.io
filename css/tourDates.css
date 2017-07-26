@@ -1,0 +1,28 @@
+/*--------------------------Begin the CSS--------------------------*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font: 1.6rem/1.5 Arial, san-serif;
+	background: #333333;
+	color: #EAEAEA;
+}
+/*--------------------------Tour Dates Section--------------------------*/
+section thead {
+  visibility: hidden;
+}
+section h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+section table {
+  display: inline-block;
+}
+section .wrapper {
+  text-align: center;
+}
+table td {
+  display: block; 
+  width: 100%;
+}

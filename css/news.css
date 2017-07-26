@@ -7,10 +7,10 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
-.wrapper {
+/*.wrapper {
 	max-width: 90rem;
 	margin: 0 auto;
-}
+}*/
 /*--------------------------news Section--------------------------*/
 #bandNews img {
   width: 30%;

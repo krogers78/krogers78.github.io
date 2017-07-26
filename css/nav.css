@@ -8,14 +8,14 @@ body {
 	color: #EAEAEA;
 }
 .wrapper {
-	max-width: 90rem;
+	max-width: 110rem;
 	margin: 0 auto;
 }
 /*--------------------------Header Section--------------------------*/
 header {
   background: #783C90;
   height: 12.5rem;
-  text-align: center;
+  text-align: right;
 }
 header img {
   width: 75%;
@@ -34,4 +34,47 @@ header li a {
 }
 header li a:hover {
   opacity: 1;
+}
+/*--------------------------Footer Section--------------------------*/
+footer {
+	background: #EEEEEE;
+	color: #666666;
+	padding: 2rem;
+	text-align: center;
+}
+footer li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0rem 0.5rem 0rem 0rem;
+}
+footer li a {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+footer a[href^='http'] {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	text-indent: -9999px;
+}
+footer a[href*='facebook.com'], footer a[href*='google.com'], footer a[href*='twitter.com'], footer a[href*='youtube.com'],footer a[href*='instagram.com'] {
+	background: url("../images/social.png");
+	background-size: 15rem;
+	top: 0;
+}
+footer a[href*='facebook.com']:hover, footer a[href*='google.com']:hover, footer a[href*='twitter.com']:hover, footer a[href*='youtube.com']:hover, footer a[href*='instagram.com']:hover {
+	background-position-y: bottom;
+}
+footer a[href*='google.com'] {
+	background-position-x: 3rem;
+}
+footer a[href*='instagram.com'] {
+	background-position-x: 6rem;
+}
+footer a[href*='youtube.com'] {
+	background-position-x: 9rem;
+}
+footer a[href*='twitter.com'] {
+	background-position-x: 12rem;
 }
