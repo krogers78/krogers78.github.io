@@ -74,7 +74,7 @@ header p a, #tourDates p a, #about p a {
 	background: #222222;
 	padding: 0 5rem 0 5rem;
 	top: 35rem;
-	left: 93.2rem;
+	left: 70.2rem;
 }
 .latestSingle h3, .latestSingle p:not(:nth-of-type(2)) {
 	font-weight: bold;
@@ -212,9 +212,12 @@ header p a, #tourDates p a, #about p a {
 /*--------------------------Tour Dates Section--------------------------*/
 #tourDates {
 	position: relative;
-	height: 40rem;
+	padding: 8rem 0;
 }
-#tourDates .wrapper::after {
+#tourDates .wrapper {
+	position: relative;
+}
+#tourDates::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -226,12 +229,10 @@ header p a, #tourDates p a, #about p a {
 	z-index: 0;
 }
 #tourDates table {
-	position: absolute;
-	top: 10rem;
-	left: 45rem;
+	float: right;
+	width: 75%;
 	color: #CCCCCC;
 	padding-left: 2rem;
-	z-index: 2;
 }
 #tourDates h2, #tourDates h3 {
 	text-transform: uppercase;
@@ -246,9 +247,6 @@ header p a, #tourDates p a, #about p a {
 	text-align: right;
 	border-right: 0.3rem solid #CCCCCC;
 	padding-right: 0.5rem;
-	position: absolute;
-	z-index: 2;
-	left: 110rem;
 }
 #tourDates h2 span {
 	color: #EEEEEE;
@@ -265,10 +263,6 @@ header p a, #tourDates p a, #about p a {
 	float: left;
 	font-size: 2rem;
 	color: #EEEEEE;
-	position: absolute;
-	z-index: 2;
-	top: 8rem;
-	left: 25rem;
 }
 #tourDates h3::before {
 	content: "";
@@ -286,9 +280,9 @@ header p a, #tourDates p a, #about p a {
   font-size: 1.5rem;
 	color: #EEEEEE;
 }
-#tourDates p {
-	z-index: 1;
-	top: 35rem;
+#tourDates table + p {
+	width: 75%;
+	float: right;
 }
 #tourDates thead {
 	display: none;
@@ -328,12 +322,6 @@ header p a, #tourDates p a, #about p a {
 }
 #tourDates tr:nth-of-type(odd) {
 	background: rgba(0,0,0,0.3);
-}
-#tourDates .button {
-	position: absolute;
-	top: 35rem;
-	left: 47rem;
-	z-index: 2;
 }
 /*--------------------------About Section--------------------------*/
 .info {
