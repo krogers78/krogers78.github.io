@@ -7,7 +7,19 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
-/*--------------------------Contact Section--------------------------*/
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background: #222222;
+	border-top: transparent;
+	border-left: transparent;
+	height: 3rem;
+	width: 13rem;
+	border-bottom: 0.2rem solid #444444;
+	color: #EEEEEE;
+}
+/*--------------------------Contact Information Section--------------------------*/
 #contact {
   position: relative;
 }
@@ -22,15 +34,49 @@ h2 {
   top: 10rem;
 }
 #contact dl {
-  padding: 5rem;
+  padding: 2rem 12rem 9rem 5rem;
   left: 35rem;
 }
+#contact dt {
+	font-size: 2.3rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1rem 0 1.5rem 0;
+}
+#contact dd a, #contact dd {
+	text-decoration: none;
+	color: #A5A5A5;
+}
+#contact dd address {
+	font-style: normal;
+}
+/*--------------------------Contact Form Section--------------------------*/
 #contact form {
   top: 11.5rem;
-  padding: 2rem 3rem 4rem 3rem;
-  left: 80rem;
+  padding: 0rem 6rem 4rem 3rem;
+  left: 74rem;
 }
-
+#contact form h3 {
+	text-transform: uppercase;
+	padding-top: 1rem;
+}
+#contact form p:nth-of-type(1) input, #contact form p:nth-of-type(2) input, #contact form textarea {
+	display: block;
+	border: transparent;
+	background: #783C90;
+	border-bottom: 0.3rem solid #222222;
+	width: 33rem;
+}
+#contact form p:nth-of-type(1) input, #contact form p:nth-of-type(2) input {
+	padding-bottom: 0.8rem;
+}
+#contact form textarea {
+	height: 8rem;
+}
+#contact form label {
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
 /*--------------------------Footer Section--------------------------*/
 footer {
   top: 52rem;

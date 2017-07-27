@@ -54,13 +54,23 @@ xhr.onload = function() {
 		if (newsArticles) {
 			for (var i = 0; i < newsArticles.length; i++) {
 				newsArticles[i].querySelector('h3').innerHTML = responseObject.news[i].title;
-				newsArticles[i].querySelector('img').src = responseObject.news[i].imageURL;
+				// newsArticles[i].querySelector('img').src = responseObject.news[i].imageURL;
 				newsArticles[i].querySelector('time').innerHTML = responseObject.news[i].postDate;
 				newsArticles[i].querySelector('time').dateTime = responseObject.news[i].postDate;
 				newsArticles[i].querySelectorAll('p')[1].innerHTML = responseObject.news[i].text;
 			}
 		}
 
+		var theBand = document.querySelectorAll('#aboutMembers dl');
+		if (theBand) {
+			for (var i = 0; i < theBand.length; i++) {
+				theBand[i].querySelector('img').src = responseObject.members[i].imageURL;
+				theBand[i].querySelectorAll('dd')[1].innerHTML = responseObject.members[i].instrument;
+				theBand[i].querySelector('dt').innerHTML = `${responseObject.members[i].firstname} ${responseObject.members[i].lastname}`;
+
+
+			}
+		}
 
 
 	//}

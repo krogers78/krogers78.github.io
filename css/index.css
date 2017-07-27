@@ -41,6 +41,10 @@ body {
 	transform: rotate(45deg);
 }
 /*--------------------------Header Section--------------------------*/
+header {
+	position: relative;
+	height: 50rem;
+}
 h1 {
   padding: 5rem 0rem 0rem 0rem;
 }
@@ -66,7 +70,39 @@ header p a, #tourDates p a, #about p a {
   text-decoration: none;
 }
 .latestSingle {
-	text-align: right;
+	position: absolute;
+	background: #222222;
+	padding: 0 5rem 0 5rem;
+	top: 35rem;
+	left: 93.2rem;
+}
+.latestSingle h3, .latestSingle p:not(:nth-of-type(2)) {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.latestSingle h3 {
+	font-size: 3rem;
+	line-height: 1;
+}
+.latestSingle p:not(:nth-of-type(2)) {
+	position: absolute;
+	display: block;
+	width: 7rem;
+	top: 5.5rem;
+	right: 21rem;
+	font-size: 1rem;
+	line-height: 1;
+}
+.latestSingle::after {
+	content: "";
+	width: 0;
+	position: absolute;
+	bottom: 0;
+	right: 33.4rem;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 19rem 10rem;
+	border-color: transparent transparent #222222 transparent;
 }
 /*--------------------------News Section--------------------------*/
 .wrapper::after {
@@ -87,7 +123,7 @@ header p a, #tourDates p a, #about p a {
 	box-sizing: border-box;
   overflow: hidden;
 }
-#news article:not(:nth-of-type(2n+3)) {
+#news article:not(:nth-of-type(2n+3)), #about img:not(:nth-of-type(2n+3)) {
 	margin-right: 2rem;
 }
 #news article::after {

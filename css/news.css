@@ -7,17 +7,57 @@ body {
 	background: #333333;
 	color: #EAEAEA;
 }
-/*.wrapper {
-	max-width: 90rem;
-	margin: 0 auto;
-}*/
-/*--------------------------news Section--------------------------*/
-#bandNews img {
-  width: 30%;
-  float: left;
+/*--------------------------News Section--------------------------*/
+#bandNews h2, #bandNews article h3 {
+	font-weight: bold;
+  text-transform: uppercase;
+}
+#bandNews h2 {
+	text-align: center;
+  font-size: 2.8rem;
+}
+#bandNews article h3 {
+	font-size: 2.4rem;
+	color: #A5A5A5;
+}
+#bandNews article {
+	float: left;
+	width: 30%;
+	position: relative;
+	padding: 0 0 4rem 0;
+}
+#bandNews article:not(:nth-of-type(3n)) {
+	margin-right: 4rem;
+}
+#bandNews::after {
+	content: "";
+	clear: both;
+}
+#bandNews article time {
+	position: absolute;
+	top: 0;
+}
+#bandNews article p:nth-of-type(2) {
+	font-size: 1.2rem;
+}
+#bandNews article:nth-of-type(3n)::after {
+	content: "";
+	display: block;
+	margin-top: 1rem;
+	width: 110rem;
+	height: 0.5rem;
+	background: #783C90;
+	opacity: 0.6;
+	position: absolute;
+	right: 0rem;
 }
 /*--------------------------Footer Section--------------------------*/
-footer li {
+footer {
+	position: absolute;
+	width: 90%;
+	top: 90rem;
+	right: 0;
+  left: 0;
   clear: both;
   display: inline-block;
 }
