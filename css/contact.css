@@ -19,6 +19,7 @@ body {
 	border-bottom: 0.2rem solid #444444;
 	color: #EEEEEE;
 }
+
 /*--------------------------Contact Information Section--------------------------*/
 #contact {
   position: relative;
@@ -53,7 +54,7 @@ h2 {
 /*--------------------------Contact Form Section--------------------------*/
 #contact form {
   top: 11.5rem;
-  padding: 0rem 6rem 4rem 3rem;
+  padding: 0 6rem 4rem 3rem;
   left: 74rem;
 }
 #contact form h3 {
@@ -64,6 +65,7 @@ h2 {
 	display: block;
 	border: transparent;
 	background: #783C90;
+	color: #EEEEEE;
 	border-bottom: 0.3rem solid #222222;
 	width: 33rem;
 }
@@ -76,6 +78,10 @@ h2 {
 #contact form label {
 	text-transform: uppercase;
 	font-size: 1.3rem;
+}
+#contact .error {
+	color: #F1C40F;
+	text-transform: none;
 }
 /*--------------------------Footer Section--------------------------*/
 footer {
